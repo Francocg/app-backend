@@ -11,6 +11,7 @@ app.use(express.json());
 
 app.use('/api/auth', require('./routes/auth'));
 app.use( '/api/archivos', require('./routes/archivos') );
+app.use('/api/mail', require('./routes/email.routes'))
 
 app.listen(process.env.PORT, () => {
     console.log(`Run server on port: ${process.env.PORT}`);
